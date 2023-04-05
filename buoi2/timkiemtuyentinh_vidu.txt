@@ -1,0 +1,32 @@
+//https://gochocit.com/ky-thuat-lap-trinh/thuat-toan-tim-kiem-tuyen-tinh-linear-search
+
+#include <iostream>
+using namespace std;
+
+int timkiemtuyentinh(int arr[], int n, int x) 
+{ 
+    int i; 
+    for (i = 0; i < n; i++){
+         if (arr[i] == x) 
+            return i; 
+    }
+    return -1;
+} 
+
+int main() {
+    int n;
+    cout<<"so phan tu trong mang: ";
+    cin>>n;
+    int a[n];
+    cout<<"nhap mang:\n" ;
+    for(int i=0;i<n;i++){
+        cin>>a[i];
+    }
+    int x;
+    cout<<"nhap x can tim: ";
+    cin>>x;
+    int kq=timkiemtuyentinh(a,n,x);
+    if(kq!=-1)
+    cout<<"vi tri "<<x<<" la "<<timkiemtuyentinh(a,n,x);
+    return 0;
+}
